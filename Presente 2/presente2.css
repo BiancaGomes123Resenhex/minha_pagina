@@ -1,0 +1,192 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+
+    background-color: #ca6eb3 !important;
+}
+
+.damion-regular {
+    font-family: "Damion", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 60px 30px;
+
+    box-sizing: border-box;
+
+    /* ANIMAÇÃO DE ENTRADA */
+    animation: entrar 0.5s ease;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+h2 {
+    margin: 40px 0 70px;
+
+    text-align: center;
+
+    font-size: 48px;
+
+    color: #5a3150;
+}
+
+
+/* =========================
+   PLAYER
+========================= */
+
+.spotify {
+    width: 700px;
+    max-width: 90vw;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.spotify iframe {
+    display: block;
+
+    border: none;
+}
+
+
+/* =========================
+   PLAYLIST
+========================= */
+
+#playlist {
+    width: 400px;
+    height: 70px;
+
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+
+    background-color: #f5e6a8;
+
+    color: #5a3150;
+
+    text-decoration: none;
+
+    font-size: 28px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   INÍCIO
+========================= */
+
+#inicio {
+    width: 200px;
+    height: 65px;
+
+    margin-top: 120px;
+    margin-bottom: 50px;
+
+    border: 1px solid #d89b00;
+    border-radius: 10px;
+
+    background-color: #f5e6a8;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   ANIMAÇÃO DE ENTRADA
+========================= */
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   ANIMAÇÃO DE SAÍDA
+========================= */
+
+body.saindo {
+    animation: sair 0.4s ease forwards;
+}
+
+
+@keyframes sair {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-size: 36px;
+
+        margin: 30px 0 50px;
+    }
+
+    .spotify {
+        width: 90vw;
+    }
+
+    #playlist {
+        width: 80vw;
+
+        font-size: 23px;
+    }
+
+    #inicio {
+        width: 180px;
+
+        font-size: 24px;
+    }
+}

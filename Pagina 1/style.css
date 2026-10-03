@@ -1,0 +1,176 @@
+.damion-regular {
+    font-family: "Damion", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ==========================
+   PÁGINA
+========================== */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ca6eb3bb;
+
+    font-family: "Damion", cursive;
+
+    animation: entrar 0.5s ease;
+}
+
+
+/* ==========================
+   TÍTULO
+========================== */
+
+.titulo {
+    margin: 0;
+    padding: 20px 30px;
+
+    background-color: #c99bdf;
+
+    border-radius: 10px;
+
+    font-size: 50px;
+    text-align: center;
+}
+
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.botoes {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 80px;
+
+    margin-top: 80px;
+}
+
+
+.botao {
+    width: 250px;
+    height: 130px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-family: "Damion", cursive;
+    font-size: 35px;
+
+    cursor: pointer;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* ==========================
+   BOTÃO SIM
+========================== */
+
+.sim {
+    background-color: #cce5b8;
+
+    animation: pulsar 1.2s ease-in-out infinite;
+}
+
+
+/* ==========================
+   BOTÃO NÃO
+========================== */
+
+.nao {
+    background-color: #e99a9a;
+}
+
+
+/* ==========================
+   NÃO FUGINDO
+========================== */
+
+.nao.fugindo {
+    position: fixed;
+
+    transition:
+        transform 0.4s ease,
+        left 0.4s ease,
+        top 0.4s ease;
+}
+
+
+/* ==========================
+   ANIMAÇÃO DO PULSO
+========================== */
+
+@keyframes pulsar {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(204, 229, 184, 0.8);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px 8px rgba(204, 229, 184, 0.4);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(204, 229, 184, 0.8);
+    }
+
+}
+
+
+/* ==========================
+   ENTRADA DA PÁGINA
+========================== */
+
+@keyframes entrar {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================
+   SAÍDA DA PÁGINA
+========================== */
+
+body.saindo {
+    animation: sair 0.4s ease forwards;
+}
+
+
+@keyframes sair {
+
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+}

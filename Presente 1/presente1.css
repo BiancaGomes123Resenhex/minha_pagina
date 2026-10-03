@@ -1,0 +1,492 @@
+/* ==========================
+   PÁGINA
+========================== */
+
+html,
+body {
+
+    margin: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    background-color: #ca6eb3 !important;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+
+    font-family: "Damion", cursive;
+
+    animation: entrar 0.5s ease;
+
+}
+
+
+/* ==========================
+   TÍTULO
+========================== */
+
+.Mensagem {
+
+    text-align: center;
+
+    margin: 20px auto 50px;
+
+    font-size: 42px;
+
+    color: #5a3150;
+
+}
+
+
+/* ==========================
+   MURAL
+========================== */
+
+.mural {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 35px 25px;
+
+    justify-items: center;
+
+    align-items: center;
+
+}
+
+
+/* ==========================
+   CARDS
+========================== */
+
+.card {
+
+    width: 220px;
+
+    padding: 8px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #f5e6a8;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* ==========================
+   IMAGENS
+========================== */
+
+.card-img-top {
+
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+}
+
+
+/* ==========================
+   EFEITO AO PASSAR O MOUSE
+========================== */
+
+.card:hover {
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* ==========================
+   INCLINAÇÕES
+========================== */
+
+/* 1ª e 2ª COLUNAS */
+
+.card:nth-child(4n + 1),
+.card:nth-child(4n + 2) {
+
+    transform:
+        rotate(-5deg);
+
+}
+
+
+/* 3ª e 4ª COLUNAS */
+
+.card:nth-child(4n + 3),
+.card:nth-child(4n) {
+
+    transform:
+        rotate(5deg);
+
+}
+
+
+/* ==========================
+   ANIMAÇÃO
+========================== */
+
+.card {
+
+    animation:
+        aparecer 0.6s ease forwards;
+
+}
+
+
+/* Pequeno atraso entre as fotos */
+
+.foto1 {
+    animation-delay: 0.05s;
+}
+
+.foto2 {
+    animation-delay: 0.10s;
+}
+
+.foto3 {
+    animation-delay: 0.15s;
+}
+
+.foto4 {
+    animation-delay: 0.20s;
+}
+
+.foto5 {
+    animation-delay: 0.25s;
+}
+
+.foto6 {
+    animation-delay: 0.30s;
+}
+
+.foto7 {
+    animation-delay: 0.35s;
+}
+
+.foto8 {
+    animation-delay: 0.40s;
+}
+
+.foto9 {
+    animation-delay: 0.45s;
+}
+
+.foto10 {
+    animation-delay: 0.50s;
+}
+
+.foto11 {
+    animation-delay: 0.55s;
+}
+
+.foto12 {
+    animation-delay: 0.60s;
+}
+
+.foto13 {
+    animation-delay: 0.65s;
+}
+
+.foto14 {
+    animation-delay: 0.70s;
+}
+
+.foto15 {
+    animation-delay: 0.75s;
+}
+
+.foto16 {
+    animation-delay: 0.80s;
+}
+
+.foto17 {
+    animation-delay: 0.85s;
+}
+
+.foto18 {
+    animation-delay: 0.90s;
+}
+
+.foto19 {
+    animation-delay: 0.95s;
+}
+
+.foto20 {
+    animation-delay: 1.00s;
+}
+
+.foto21 {
+    animation-delay: 1.05s;
+}
+
+.foto22 {
+    animation-delay: 1.10s;
+}
+
+.foto23 {
+    animation-delay: 1.15s;
+}
+
+.foto24 {
+    animation-delay: 1.20s;
+}
+
+.foto25 {
+    animation-delay: 1.25s;
+}
+
+.foto26 {
+    animation-delay: 1.30s;
+}
+
+.foto27 {
+    animation-delay: 1.35s;
+}
+
+.foto28 {
+    animation-delay: 1.40s;
+}
+
+.foto29 {
+    animation-delay: 1.45s;
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ==========================
+   BOTÃO INÍCIO
+========================== */
+
+#inicio {
+
+    display: block;
+
+    width: 180px;
+
+    height: 60px;
+
+    margin:
+        70px auto
+        40px;
+
+    border: 1px solid #d89b00;
+
+    border-radius: 10px;
+
+    background-color: #f5e6a8;
+
+    font-family: "Damion", cursive;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* ==========================
+   ENTRADA
+========================== */
+
+@keyframes entrar {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================
+   SAÍDA
+========================== */
+
+body.saindo {
+
+    animation:
+        sair 0.4s ease forwards;
+
+}
+
+
+@keyframes sair {
+
+    from {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+    to {
+
+        opacity: 0;
+
+        transform:
+            translateY(-15px);
+
+    }
+
+}
+
+
+/* ==========================
+   CELULAR
+========================== */
+
+@media (max-width: 1080px) {
+
+    .mural {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 35px 15px;
+
+    }
+
+
+    .card {
+
+        width: 180px;
+
+    }
+
+
+    .card-img-top {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+    .Mensagem {
+
+        font-size: 36px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .mural {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px 10px;
+
+    }
+
+
+    .card {
+
+        width: 145px;
+
+        padding: 6px;
+
+    }
+
+
+    .card-img-top {
+
+        width: 145px;
+
+        height: 145px;
+
+    }
+
+
+    .Mensagem {
+
+        font-size: 32px;
+
+        margin-bottom: 35px;
+
+    }
+
+}
